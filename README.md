@@ -9,11 +9,11 @@ When you need a consistent way to handle HTTP responses. Uses ES6 `class` and `e
 
 Inspiration from the awesome [http-errors](https://www.npmjs.com/package/http-errors) module. 
 
-### Installation
+## Installation
 
 `npm install es6-http-response`
 
-### Usage
+## Usage
 
 ```javascript
 const HttpResponse = require('es6-http-response')
@@ -33,7 +33,7 @@ const status = HttpResponse.OK()
 status instanceof HttpResponse.HttpStatus // true
 ```
 
-### Example
+## Example
 
 ```javascript
 const HttpResponse = require('es6-http-response')
@@ -66,17 +66,17 @@ return asyncOperation()
 
 ```
 
-### Methods
+## Methods
 
 All method names are the corresponding HTTP message in PascalCase, e.g. `HttpResponse.NotFound()` results in a status _404_ with message _Not Found_.
 
 See [http-errors](https://www.npmjs.com/package/http-errors) for all method names.
 
-### Test
+## Test
 
 `npm test`
 
-### License
+## License
 
 [MIT](./LICENSE)
 
