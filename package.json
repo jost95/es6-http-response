@@ -1,6 +1,6 @@
 {
   "name": "es6-http-response",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Handles both regular and error HTTP responses",
   "main": "src/index.js",
   "scripts": {
