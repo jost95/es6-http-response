@@ -1,6 +1,6 @@
 {
   "name": "es6-http-response",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "ES6 HTTP response handler which takes care of both regular statuses and errors",
   "keywords": [
     "http",
