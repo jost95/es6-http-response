@@ -1,7 +1,14 @@
 {
   "name": "es6-http-response",
   "version": "1.0.3",
-  "description": "Handles both regular and error HTTP responses",
+  "description": "ES6 HTTP response handler which takes care of both regular statuses and errors",
+  "keywords": [
+    "http",
+    "error",
+    "status",
+    "response",
+    "es6"
+  ],
   "main": "src/index.js",
   "scripts": {
     "test": "standard --fix && mocha"
