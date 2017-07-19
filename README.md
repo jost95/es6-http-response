@@ -11,7 +11,9 @@ Inspiration from the awesome [http-errors](https://www.npmjs.com/package/http-er
 
 ## Installation
 
-`npm install es6-http-response`
+```javascript
+npm install es6-http-response
+```
 
 ## Usage
 
@@ -33,7 +35,40 @@ const status = HttpResponse.OK()
 status instanceof HttpResponse.HttpStatus // true
 ```
 
-## Example
+## Example with Express
+
+```javascript
+const HttpResponse = require('es6-http-response')
+const express = require('express')
+const app = express()
+
+/* ... business logic ... */
+
+// Catch 404 error
+app.use((req, res, next) => {
+  next(HttpResponse.NotFound())
+})
+
+// Log error
+app.use((err, req, res, next) => {
+  console.error(err)
+  next(err)
+})
+
+// If not a HTTP error, create an internal server error
+app.use((err, req, res, next) => {
+  err instanceof HttpResponse.HttpError ? next(err) : next(HttpResponse.InternalServerError())
+})
+
+// Handle error and respond to client
+app.use((err, req, res, next) => {
+  res.status(err.http_status).send(err.message)
+})
+
+/* ... */
+```
+
+## Example with a custom setup
 
 ```javascript
 const HttpResponse = require('es6-http-response')
